@@ -40,7 +40,12 @@ $(function() {
     }).on('contextmenu', '.tile', function (e) {
         e.preventDefault();
 
-        $(this).css( 'background-color', 'blue' );
+        console.log($(this).css( 'background-color'));
+        if ($(this).css( 'background-color') === 'rgb(0, 0, 255)') {
+            $(this).css( 'background-color', '');
+        } else {
+            $(this).css( 'background-color', 'blue');
+        }
     });
 });
 
